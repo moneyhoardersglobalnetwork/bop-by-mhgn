@@ -9,7 +9,7 @@ import {
   useScaffoldEventSubscriber,
 } from "~~/hooks/scaffold-eth";
 
-const MARQUEE_PERIOD_IN_SEC = 5;
+const MARQUEE_PERIOD_IN_SEC = 600;
 
 export const ContractData = () => {
   const { address } = useAccount();
@@ -71,9 +71,9 @@ export const ContractData = () => {
   }, [transitionEnabled, containerRef, greetingRef]);
 
   return (
-    <div className="flex flex-col justify-center items-center bg-[url('/assets/gradient-bg.png')] bg-[length:100%_100%] py-10 px-5 sm:px-0 lg:py-auto max-w-[100vw] ">
+    <div className="flex flex-col justify-center items-center bg-[url('/assets/background.jpeg')] bg-[length:100%_100%] py-10 px-5 sm:px-0 lg:py-auto max-w-[100vw] ">
       <div
-        className={`flex flex-col max-w-md bg-base-200 bg-opacity-70 rounded-2xl shadow-lg px-5 py-4 w-full ${
+        className={`flex flex-col max-w-full bg-300 bg-opacity-100 rounded-2xl shadow-lg px-5 py-4 w-full ${
           showAnimation ? "animate-zoom" : ""
         }`}
       >
@@ -90,7 +90,7 @@ export const ContractData = () => {
               }`}
             />
           </button>
-          <div className="bg-secondary border border-primary rounded-xl flex">
+          <div className="bg-neutral border border-primary rounded-xl flex">
             <div className="p-2 py-1 border-r border-primary flex items-end">Total count</div>
             <div className="text-4xl text-right min-w-[3rem] px-2 py-1 flex justify-end font-bai-jamjuree">
               {totalCounter?.toString() || "0"}
@@ -98,7 +98,7 @@ export const ContractData = () => {
           </div>
         </div>
 
-        <div className="mt-3 border border-primary bg-neutral rounded-3xl text-secondary  overflow-hidden text-[116px] whitespace-nowrap w-full uppercase tracking-tighter font-bai-jamjuree leading-tight">
+        <div className="mt-3 border border-primary bg-neutral rounded-3xl text-primary  overflow-hidden text-[116px] whitespace-nowrap w-full uppercase tracking-tighter font-bai-jamjuree leading-tight">
           <div className="relative overflow-x-hidden" ref={containerRef}>
             {/* for speed calculating purposes */}
             <div className="absolute -left-[9999rem]" ref={greetingRef}>
@@ -113,7 +113,7 @@ export const ContractData = () => {
                   gradient={false}
                   play={showTransition}
                   speed={marqueeSpeed}
-                  className={i % 2 ? "-my-10" : ""}
+                  className={i % 1 ? "-my-10" : ""}
                 >
                   <div className="px-4">{currentGreeting || " "}</div>
                 </Marquee>

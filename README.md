@@ -76,3 +76,10 @@ To know more about its features, check out our [website](https://scaffoldeth.io)
 We welcome contributions to Scaffold-ETH 2!
 
 Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+
+
+
+
+deploying "YourContract" (tx: 0x872f7ff582cb2cb5c4194792bb8acf9ea181850de2eb7bc93509a6ed8f49146b)...: deployed at 0xD2e65FF27047dB4b7A1E14DB5A165064bD859Be4 with 482407 gas
+deploying "BopHoardingContract" (tx: 0x87b601b97701b07825ad53ac71f3f37d3b1536756e37ca1e1b287d00dbafb014)...: deployed at 0x0860A1883FA630Beb62a51482f94Fecf63937166 with 1102973 gas
+📝 Updated TypeScript contract definition file on ../nextjs/generated/deployedContracts.ts
